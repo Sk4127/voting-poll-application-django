@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock custom_css %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div id="home-content">
+                <h1>PollMe </h1>
+                <h3>Your Voice Matters!</h3>
+                <hr>
+                <a class="btn btn-light btn-lg" href="{% url 'polls:list' %}" role="button">Get Started !</a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    body{
+    background-image: url('/static/img/background.jpg');
+    background-size: cover;
+    }
+</style>
+{% endblock content %}
